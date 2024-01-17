@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucak Turizm - Sefer Saati ve Koltuk Seçme</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url('bg.jpg');
+            background-size: cover;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        select {
+            margin-bottom: 16px;
+        }
+
+        .koltuklar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .koltuk {
+            width: 30px;
+            height: 30px;
+            background-color: #5cb85c;
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        #seferListesi {
+            margin-top: 20px;
+            color: #fff;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bucak Turizm</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="iletisim.html">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Bucak Turizm - Sefer Saati ve Koltuk Seçme</h1>
+
+                <label for="saat">Sefer Saati:</label>
+                <select id="saat" class="form-control">
+                    <option value="08:00">08:00</option>
+                    <option value="10:00">10:00</option>
+                    <option value="12:00">12:00</option>
+                    <option value="16:00">16:00</option>
+                    <option value="18:00">18:00</option>
+                    <option value="20:00">20:00</option>
+                </select>
+
+                <label>Koltuk Seçimi:</label>
+                <div class="koltuklar" id="koltuklar"></div>
+
+                <button onclick="odemeSayfasinaGec()" class="btn btn-primary">Ödemeye Geç</button>
+            </div>
+            <div class="col-md-6">
+                <div id="seferListesi"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        var koltukSayisi = 40; // Güncellendi
+        var secilenKoltuklar = [];
+
+        function koltuklariOlustur() {
+            var koltuklarDiv = document.getElementById("koltuklar");
+            koltuklarDiv.innerHTML = "";
+
+            for (var i = 1; i <= koltukSayisi; i++) {
+                var koltuk = document.createElement("div");
+                koltuk.className = "koltuk";
+                koltuk.innerHTML = i;
+                koltuk.addEventListener("click", function() {
+                    koltukSec(this);
+                });
+                koltuklarDiv.appendChild(koltuk);
+            }
+        }
+
+        function koltukSec(secilenKoltuk) {
+            var koltukNumarasi = parseInt(secilenKoltuk.innerHTML);
+
+            if (secilenKoltuklar.includes(koltukNumarasi)) {
+                secilenKoltuklar = secilenKoltuklar.filter(function(koltuk) {
+                    return koltuk !== koltukNumarasi;
+                });
+                secilenKoltuk.style.backgroundColor = "#5cb85c";
+            } else {
+                secilenKoltuklar.push(koltukNumarasi);
+                secilenKoltuk.style.backgroundColor = "#d9534f";
+            }
+        }
+
+        function odemeSayfasinaGec() {
+            // Burada, seçilen koltuklara göre odeme.html dosyasına yönlendirme yapabilirsiniz.
+            window.location.href = "odeme.html";
+        }
+
+        // Sayfa yüklendiğinde koltukları oluştur
+        window.onload = koltuklariOlustur;
+    </script>
+</body>
+</html>

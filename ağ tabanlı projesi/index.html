@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucak Turizm</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        
+        .hakkinda-link {
+            
+            color: white;
+            
+        }
+
+        
+        .hakkinda-link:hover {
+            background-color: #FFA500;
+            color: black;
+            
+        }
+
+        .ulasin-link {
+            
+            color: white;
+            
+        }
+
+        
+        .ulasin-link:hover {
+            background-color: #FFA500;
+            color: black;
+            
+        }
+        .logo-text {
+            font-size: 36px; 
+            font-weight: bold; 
+            font-family: 'Arial', sans-serif; 
+            
+        }
+        .button {
+            background-color: #FFA500; 
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.5s;
+            cursor: pointer;
+        }
+
+        .button1 {
+            background-color: white; 
+            color: black; 
+             border: 2px solid #FFA500;
+        }
+
+        .button1:hover {
+            background-color: #FFA500;
+            color: white;
+        }
+        .custom-select {
+            font-size: 0.85rem; /* Yazı tipi boyutu */
+            padding: 0.25rem 0.5rem; /* Dolgu */
+            height: auto; /* Yükseklik */
+            width: 150px;
+            border-radius: 15px;
+          }
+        .custom-date{
+            font-size: 0.85rem; /* Yazı tipi boyutu */
+            padding: 0.25rem 0.5rem; /* Dolgu */
+            height: auto; /* Yükseklik */
+            width: 150px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('bg.jpg'); background-size: cover; ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+          <a class="navbar-brand" href="#">Bucak Turizm</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Anasayfa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="iletisim.html">İletişim</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <form style="text-align:center; margin-top: 150px;">
+        
+        <label for="sehir" style="color: #FFA500;">Nereden:</label>
+        <select class="custom-select" id="sehir" name="sehir" style="width: 140px;" >
+            <option selected>Seçiniz</option>
+            <option value="01">Adana</option>
+            <option value="02">Adıyaman</option>
+            <option value="03">Afyonkarahisar</option>
+            <option value="04">Ağrı</option>
+            <option value="05">Amasya</option>
+            <option value="06">Ankara</option>
+            <option value="07">Antalya</option>
+            <option value="08">Artvin</option>
+            <option value="09">Aydın</option>
+            <option value="10">Balıkesir</option>
+            <option value="11">Bilecik</option>
+            <option value="12">Bingöl</option>
+            <option value="13">Bitlis</option>
+            <option value="14">Bolu</option>
+            <option value="15">Burdur</option>
+            <option value="16">Bursa</option>
+            <option value="17">Çanakkale</option>
+            <option value="18">Çankırı</option>
+            <option value="19">Çorum</option>
+            <option value="20">Denizli</option>
+            <option value="21">Diyarbakır</option>
+            <option value="22">Edirne</option>
+            <option value="23">Elazığ</option>
+            <option value="24">Erzincan</option>
+            <option value="25">Erzurum</option>
+            <option value="26">Eskişehir</option>
+            <option value="27">Gaziantep</option>
+            <option value="28">Giresun</option>
+            <option value="29">Gümüşhane</option>
+            <option value="30">Hakkari</option>
+            <option value="31">Hatay</option>
+            <option value="32">Isparta</option>
+            <option value="33">Mersin</option>
+            <option value="34">İstanbul</option>
+            <option value="35">İzmir</option>
+            <option value="36">Kars</option>
+            <option value="37">Kastamonu</option>
+            <option value="38">Kayseri</option>
+            <option value="39">Kırklareli</option>
+            <option value="40">Kırşehir</option>
+            <option value="41">Kocaeli</option>
+            <option value="42">Konya</option>
+            <option value="43">Kütahya</option>
+            <option value="44">Malatya</option>
+            <option value="45">Manisa</option>
+            <option value="46">Kahramanmaraş</option>
+            <option value="47">Mardin</option>
+            <option value="48">Muğla</option>
+            <option value="49">Muş</option>
+            <option value="50">Nevşehir</option>
+            <option value="51">Niğde</option>
+            <option value="52">Ordu</option>
+            <option value="53">Rize</option>
+            <option value="54">Sakarya</option>
+            <option value="55">Samsun</option>
+            <option value="56">Siirt</option>
+            <option value="57">Sinop</option>
+            <option value="58">Sivas</option>
+            <option value="59">Tekirdağ</option>
+            <option value="60">Tokat</option>
+            <option value="61">Trabzon</option>
+            <option value="62">Tunceli</option>
+            <option value="63">Şanlıurfa</option>
+            <option value="64">Uşak</option>
+            <option value="65">Van</option>
+            <option value="66">Yozgat</option>
+            <option value="67">Zonguldak</option>
+            <option value="68">Aksaray</option>
+            <option value="69">Bayburt</option>
+            <option value="70">Karaman</option>
+            <option value="71">Kırıkkale</option>
+            <option value="72">Batman</option>
+            <option value="73">Şırnak</option>
+            <option value="74">Bartın</option>
+            <option value="75">Ardahan</option>
+            <option value="76">Iğdır</option>
+            <option value="77">Yalova</option>
+            <option value="78">Karabük</option>
+            <option value="79">Kilis</option>
+            <option value="80">Osmaniye</option>
+            <option value="81">Düzce</option>
+        </select>
+        
+        
+        <label for="sehir" style="color: #FFA500;">Nereye:</label>
+                <select class="custom-select" id="sehir" name="sehir" style="width: 140px;">
+                    <option selected>Seçiniz</option>
+                    <option value="01">Adana</option>
+                    <option value="02">Adıyaman</option>
+                    <option value="03">Afyonkarahisar</option>
+                    <option value="04">Ağrı</option>
+                    <option value="05">Amasya</option>
+                    <option value="06">Ankara</option>
+                    <option value="07">Antalya</option>
+                    <option value="08">Artvin</option>
+                    <option value="09">Aydın</option>
+                    <option value="10">Balıkesir</option>
+                    <option value="11">Bilecik</option>
+                    <option value="12">Bingöl</option>
+                    <option value="13">Bitlis</option>
+                    <option value="14">Bolu</option>
+                    <option value="15">Burdur</option>
+                    <option value="16">Bursa</option>
+                    <option value="17">Çanakkale</option>
+                    <option value="18">Çankırı</option>
+                    <option value="19">Çorum</option>
+                    <option value="20">Denizli</option>
+                    <option value="21">Diyarbakır</option>
+                    <option value="22">Edirne</option>
+                    <option value="23">Elazığ</option>
+                    <option value="24">Erzincan</option>
+                    <option value="25">Erzurum</option>
+                    <option value="26">Eskişehir</option>
+                    <option value="27">Gaziantep</option>
+                    <option value="28">Giresun</option>
+                    <option value="29">Gümüşhane</option>
+                    <option value="30">Hakkari</option>
+                    <option value="31">Hatay</option>
+                    <option value="32">Isparta</option>
+                    <option value="33">Mersin</option>
+                    <option value="34">İstanbul</option>
+                    <option value="35">İzmir</option>
+                    <option value="36">Kars</option>
+                    <option value="37">Kastamonu</option>
+                    <option value="38">Kayseri</option>
+                    <option value="39">Kırklareli</option>
+                    <option value="40">Kırşehir</option>
+                    <option value="41">Kocaeli</option>
+                    <option value="42">Konya</option>
+                    <option value="43">Kütahya</option>
+                    <option value="44">Malatya</option>
+                    <option value="45">Manisa</option>
+                    <option value="46">Kahramanmaraş</option>
+                    <option value="47">Mardin</option>
+                    <option value="48">Muğla</option>
+                    <option value="49">Muş</option>
+                    <option value="50">Nevşehir</option>
+                    <option value="51">Niğde</option>
+                    <option value="52">Ordu</option>
+                    <option value="53">Rize</option>
+                    <option value="54">Sakarya</option>
+                    <option value="55">Samsun</option>
+                    <option value="56">Siirt</option>
+                    <option value="57">Sinop</option>
+                    <option value="58">Sivas</option>
+                    <option value="59">Tekirdağ</option>
+                    <option value="60">Tokat</option>
+                    <option value="61">Trabzon</option>
+                    <option value="62">Tunceli</option>
+                    <option value="63">Şanlıurfa</option>
+                    <option value="64">Uşak</option>
+                    <option value="65">Van</option>
+                    <option value="66">Yozgat</option>
+                    <option value="67">Zonguldak</option>
+                    <option value="68">Aksaray</option>
+                    <option value="69">Bayburt</option>
+                    <option value="70">Karaman</option>
+                    <option value="71">Kırıkkale</option>
+                    <option value="72">Batman</option>
+                    <option value="73">Şırnak</option>
+                    <option value="74">Bartın</option>
+                    <option value="75">Ardahan</option>
+                    <option value="76">Iğdır</option>
+                    <option value="77">Yalova</option>
+                    <option value="78">Karabük</option>
+                    <option value="79">Kilis</option>
+                    <option value="80">Osmaniye</option>
+                    <option value="81">Düzce</option>
+                </select>
+         
+                <label style="color: #FFA500;">Tarih:</label>
+                <input type="date" class="custom-date"><br><br><br>
+                
+                <label for="sehir" style="color: #FFA500;">Tek Yön:</label>
+                <input type="radio" id="tekYon" name="yon" value="tekYon">
+                <label for="sehir" style="color: #FFA500;">Gidiş-Dönüş:</label>
+                <input type="radio" id="gidisDonus" name="yon" value="gidisDonus"><br><br><br><br>
+                <button type="button" class="button button1" onclick="seferleriGoster()">
+                    <span>Seferleri Göster</span>
+                </button>        
+    </form>
+    <footer class="bg-transparent text-white py-4">
+      <div class="container text-center">
+          <p>&copy; 2023 Bucak Turizm. Tüm hakları saklıdır.</p>
+      </div>
+    </footer>
+
+
+
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      function seferleriGoster() {
+        window.location.href = 'seferler.html';
+      }
+    </script>
+</body>
+
+</html>

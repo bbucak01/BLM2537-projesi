@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>İletişim Formu</title>
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    .button1 {
+      background-color: white; 
+      color: black; 
+      border: 2px solid #FFA500;
+      width: 150px; /* Buton genişliği */
+      font-size: 18px; /* Buton metin boyutu */
+      transition-duration: 0.5s;
+      display: inline-block;
+      padding: 16px 32px;
+    }
+    
+    .button1:hover {
+      background-color: #FFA500;
+      color: white;
+    }
+    .button {
+        background-color: #FFA500; 
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
+      
+    /* Şikayet alanı altındaki butonun stilini düzenlemek için */
+    .form-group:last-child {
+      text-align: center; /* İçeriği ortala */
+      margin-top: 20px; /* Boşluk bırak */
+    }
+
+    /* İletişim formunu dikdörtgen içine almak için */
+    .contact-container {
+      background-color: rgba(78, 67, 175, 0.338); /* Dikdörtgen arka plan rengi ve saydamlığı */
+      padding: 30px;
+      border-radius: 15px; /* Köşeleri yuvarlama */
+      box-shadow: 0 0 15px rgba(53, 52, 52, 0.2); /* Gölge efekti */
+    }
+  </style>
+</head>
+<body style="background-image: url('bg.jpg'); background-size: cover; ">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <div class="container">
+      <a class="navbar-brand" href="#">Bucak Turizm</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Anasayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="iletisim.html">İletişim</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 contact-container"> <!-- İletişim formunu dikdörtgen içine almak için yeni div -->
+        <h1 class="text-center mb-4" style="color: #FFA500;">İletişim Sayfası</h1>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="fullName" style="color: #FFA500;">Ad Soyad:</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" required>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber" style="color: #FFA500;">Telefon Numarası:</label>
+            <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
+          </div>
+          <div class="form-group">
+            <label for="email" style="color: #FFA500;">E-Posta:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="complaint" style="color: #FFA500;">Şikayet:</label>
+            <textarea class="form-control" id="complaint" name="complaint" rows="5" required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" class="button1">
+              <span>Gönder</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-transparent text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2023 Bucak Turizm. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+  
+
+  
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+  
+        
+        var fullName = document.getElementById('fullName').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var email = document.getElementById('email').value;
+        var complaint = document.getElementById('complaint').value;
+  
+        
+        console.log("Ad Soyad: " + fullName);
+        console.log("Telefon Numarası: " + phoneNumber);
+        console.log("E-Posta: " + email);
+        console.log("Şikayet: " + complaint);
+  
+        
+        document.getElementById('contactForm').reset();
+  
+        
+        window.location.href = 'deneme.html';
+      });
+    });
+  </script>
+</body>
+</html>
